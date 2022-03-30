@@ -1,0 +1,92 @@
+.page {
+    color: white;
+    padding: 20px 30px;
+
+    background: #E5E5E5;
+    &__content {
+      min-height: calc(100vh - 105px);
+    //   margin-top: 2rem;
+      background: white;
+      color: black;
+      font-size: 2rem;
+    }
+  }
+
+  table {
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #CECCCC;
+  }
+
+  tr.mat-header-row {
+    background: #EFEFEF;
+}
+
+.mat-header-cell{
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+color:#000000;
+}
+
+.mat-cell{
+    font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+color: #000000;
+}
+
+  .table-header{
+      margin-bottom: 45px;
+  }
+
+  .table-content{
+      float: left;
+      font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+  }
+
+  .table-add{
+      float: right;
+      font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+border: 1px solid #000000;
+border-radius: 20px;
+padding: 5px;
+cursor: pointer;
+  }
+
+  .icon-view-edit-delet{
+      display: flex;
+      .view-icon{
+          cursor: pointer;
+      }
+
+      .edit-icon{
+        margin-left: 15px;
+        cursor: pointer;
+      }
+
+      .delet-icon{
+        margin-left: 15px;
+        cursor: pointer;
+
+      }
+  }
+
+  @media only screen and (min-width: 200px) and (max-width: 767px) and (orientation : portrait) {
+    .table-responsive-1 {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+  
+  }

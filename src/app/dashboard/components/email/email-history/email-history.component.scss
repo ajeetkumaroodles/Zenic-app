@@ -1,0 +1,88 @@
+.page {
+    color: white;
+    padding: 0px 30px 30px 30px;
+  
+    background: #e5e5e5;
+    &__content {
+      min-height: calc(100vh - 105px);
+      //   margin-top: 2rem;
+      background: white;
+      color: black;
+      font-size: 2rem;
+    }
+  }
+  
+  .add-tamplate {
+    display: flex;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b6a6a;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  
+    .rating-review {
+      cursor: pointer;
+    }
+  }
+
+  .a-message{
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .search-box input {
+    width: 295px;
+    height: 40px;
+    font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  border: 1px solid #ADACAC;
+  box-sizing: border-box;
+  border-radius: 7px;
+  }
+  
+  .search-box img{
+    position: absolute;
+    margin-left: 265px;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  .add-filter {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .filter-data{
+    font-size: 14px;
+  }
+
+  .table {
+    border: 0.889727px solid #cecccc;
+    box-sizing: border-box;
+    border-radius: 6px;
+  
+    thead {
+      font-size: 14px;
+      background: #efefef;
+    }
+    tbody {
+      font-size: 12px;
+    }
+  }
+  @media only screen and (min-width: 200px) and (max-width: 767px) and (orientation: portrait) {
+    .table-responsive-1 {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  

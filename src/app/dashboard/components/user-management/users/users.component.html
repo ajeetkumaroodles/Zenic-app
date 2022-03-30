@@ -1,0 +1,124 @@
+<div class="container-fluid page">
+  <div class="page__content shadow p-3 position-relative">
+    <div class="row pb-3">
+      <div class="col-md d-flex justify-conten-start heading-all">
+        All Users
+      </div>
+      <div class="add-program" (click)="open(content)">+ Add User</div>
+    </div>
+    <table class="table table-responsive-1">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email ID</th>
+          <th scope="col">Role</th>
+          <th scope="col">Created On</th>
+          <th scope="col">Created By</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ country.Programme }}
+          </td>
+          <td>{{ country.Category }}</td>
+          <td>{{ country.Course }}</td>
+          <td>{{ country.CreatedOn }}</td>
+          <td>{{ country.LessonNote }}</td>
+          <td>
+            <img src="assets/Images/edit-icon.svg" />
+            <img class="ml-1" src="assets/Images/delet-icon.svg" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--add modal -->
+
+<ng-template #content let-modal>
+  <div class="modal-header header-addexam">
+    <h4 class="modal-title" id="modal-basic-title">ADD USER</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <img src="assets/Images/cross.svg" alt="" />
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Name *</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name">
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email *</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter email">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Role *</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option selected>Select Role</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+      <div class="btn-c-save">
+        <input
+          class="cancel"
+          (click)="modal.dismiss('Cross click')"
+          type="button"
+          value="Cancel"
+        />
+        <input
+          (click)="openSm(content1)"
+          class="save"
+          type="button"
+          value="Save"
+        />
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #content1 let-modal>
+  <div class="modal-header modal-header-check">
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <img src="assets/Images/cross-icon-black.svg" alt="" />
+    </button>
+  </div>
+  <div class="modal-body modal-body-check">
+    <div class="check">
+      <img src="../../../../../assets/Images/check.svg" alt="" />
+    </div>
+    <div class="great-exam">
+      <div class="great">Great!</div>
+      <div class="exam-s-c">User Created</div>
+    </div>
+  </div>
+</ng-template>

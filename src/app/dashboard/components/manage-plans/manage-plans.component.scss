@@ -1,0 +1,11 @@
+.page {
+    color: white;
+    padding: 30px;
+
+    background: #e5e5e5;
+    &__content {
+      min-height: calc(100vh - 10px);
+      background: white;
+      color: black;
+    }
+  }

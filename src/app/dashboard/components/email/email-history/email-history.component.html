@@ -1,0 +1,58 @@
+<div class="container-fluid page">
+  <div class="add-tamplate">
+    <div class="rating-review" [routerLink]="'/email'">All Emails /</div>
+    <div class="add-template">Email History</div>
+  </div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="row pb-3">
+      <div class="col-md d-flex justify-conten-start a-message">All Emails</div>
+      <div class="add-filter mr-3">Filter By :</div>
+      <select
+        class="form-select mr-3 filter-data"
+        aria-label="Default select example"
+      >
+        <option selected>7days</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <table class="table table-responsive-1">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">
+            Recipient <img src="assets/Images/up-down-key.svg" alt="" />
+          </th>
+          <th scope="col">
+            Topic Category <img src="assets/Images/up-down-key.svg" alt="" />
+          </th>
+          <th scope="col">Subject</th>
+          <th scope="col">Created On</th>
+          <th scope="col">Created By</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ country.Programme }}
+          </td>
+          <td>{{ country.Category }}</td>
+          <td>{{ country.Course }}</td>
+          <td>{{ country.CreatedOn }}</td>
+          <td>{{ country.LessonNote }}</td>
+          <td>
+            <img
+              [routerLink]="'../emailview'"
+              src="assets/Images/view-icon.svg"
+            />
+            <img class="ml-1" src="assets/Images/edit-icon.svg" />
+            <img class="ml-1" src="assets/Images/delet-icon.svg" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

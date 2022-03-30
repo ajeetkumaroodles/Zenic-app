@@ -1,0 +1,138 @@
+.page {
+  color: white;
+  padding: 0px 30px 30px 30px;
+
+  background: #e5e5e5;
+  &__content {
+    min-height: calc(100vh - 10px);
+    //   margin-top: 2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.add-tamplate {
+  display: flex;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6b6a6a;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  .rating-review {
+    cursor: pointer;
+  }
+}
+
+.feedback-form {
+  border: 1px solid #b8b8b8;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 10px 80px 0px 80px;
+  .feedback-form-div {
+    border-bottom: 1px solid #b8b8b8;
+    padding: 20px;
+    padding-bottom: 40px;
+
+    .feedback-form-text {
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      float: left;
+    }
+
+    .feedbackform-cross {
+      float: right;
+    }
+  }
+}
+
+.feedback-status {
+  display: flex;
+  justify-content: end;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-right: 20px;
+  div {
+    margin-right: 15px;
+  }
+}
+
+.f-forms-one {
+  background: #f2f8ff;
+}
+.f-forms-two {
+  background: rgba(226, 239, 255, 0.68);
+}
+.f-forms-three {
+  background: #f3f8fe;
+}
+
+.f-forms {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  label {
+    font-size: 14px;
+    margin-left: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .f-form-input {
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+
+    input#inlineRadio1 {
+      margin-right: 32px;
+    }
+
+    input#inlineRadio2 {
+      margin-right: 40px;
+    }
+
+    input#inlineRadio3 {
+      margin-right: 50px;
+    }
+
+    input#inlineRadio4 {
+      margin-right: 40px;
+    }
+  }
+}
+
+.feedback-text {
+  background: #f3f8fe;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 200px;
+  margin: 10px;
+
+  .few-word {
+    height: 50px;
+    background: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+
+    div {
+      padding: 10px 0px 0px 10px;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+
+  .text-area-field {
+    margin: 20px;
+  }
+}

@@ -1,0 +1,82 @@
+.page {
+  color: white;
+  padding: 0px 30px 30px 30px;
+
+  background: #e5e5e5;
+  &__content {
+    min-height: calc(100vh - 105px);
+    //   margin-top: 2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.add-tamplate {
+  display: flex;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6b6a6a;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  .rating-review {
+    cursor: pointer;
+  }
+}
+
+.email-view-header {
+  background-image: url(../../../../../assets/Images/banner.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+}
+
+.email-view-body{
+  background: #EEEEEE;
+
+  .dear-s{
+    font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+  }
+
+  .subject{
+    font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+  }
+
+  .content{
+    font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+
+
+
+  }
+
+  .best-wishes{
+    font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: left;
+
+
+  }
+
+
+}

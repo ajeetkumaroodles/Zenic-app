@@ -1,0 +1,119 @@
+.page {
+  color: white;
+  padding: 30px;
+
+  background: #e5e5e5;
+  &__content {
+    // min-height: calc(100vh - 10px);
+    //   margin-top: 2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+    border-radius: 3px;
+  }
+}
+
+.right-col::before {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  // border-bottom: 1px solid #d6d6d6;
+  // border-left: 1px solid #d6d6d6;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: -0.7rem;
+  left: -0.7rem;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+
+.right-col::after {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  // border-bottom: 1px solid #d6d6d6;
+  // border-left: 1px solid #d6d6d6;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  bottom: -0.7rem;
+  left: -0.7rem;
+  z-index: 1;
+  transform: rotate(135deg);
+}
+
+.h-100 {
+  height: 200px !important;
+}
+.left-col {
+  background: #ececee;
+
+  .school {
+    background: #dddde6;
+    border-radius: 9px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .doler {
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+
+  .year {
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+}
+
+.right-col {
+  background: #ececee;
+  border-left: 1px dashed #919191;
+
+  .features {
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  .add-branch {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+
+  .yearly-sub {
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  .renew {
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: #656565;
+  }
+}

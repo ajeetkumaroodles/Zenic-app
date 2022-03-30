@@ -1,0 +1,202 @@
+.page {
+    color: white;
+   padding: 20px 30px;
+
+    background: #E5E5E5;
+    &__content {
+      min-height: calc(100vh - 105px);
+    //   margin-top: 2rem;
+      background: white;
+      color: black;
+      font-size: 2rem;
+    }
+  }
+
+  table {
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #CECCCC;
+  }
+
+  tr.mat-header-row {
+    background: #EFEFEF;
+}
+
+.mat-header-cell{
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+color:#000000;
+}
+
+.mat-cell{
+    font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+color: #000000;
+}
+
+  .table-header{
+      margin-bottom: 45px;
+  }
+
+  .table-content{
+      float: left;
+      font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+  }
+
+  .table-add{
+      float: right;
+      font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+border: 1px solid #000000;
+border-radius: 20px;
+padding: 5px;
+cursor: pointer;
+  }
+
+  .icon-edit-delet{
+      display: flex;
+
+      .edit-icon{
+        border-radius: 15px;
+        cursor: pointer;
+
+      }
+
+      .delet-icon{
+        margin-left: 15px;
+        cursor: pointer;
+
+      }
+  }
+
+  .modal-content {
+    margin-top: 200px !important;
+}
+
+
+  .header-addexam{
+      background: #33507C;
+      height: 60px;
+      border: none;
+
+      h4{
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600; 
+        color: #FFFFFF;   
+      }
+  }
+
+
+  .modal-body label{
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  input.program-field, input.exam-board {
+    height: 40px;
+    width: 455px;
+    padding-left: 15px;
+    border: 1px solid #8A8989;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+label.lablel-exam-board {
+    margin-top: 15px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+  .btn-c-save{
+      float: right;
+      margin-top: 100px;
+
+      input[type="button"] {
+        height: 40px;
+        width: 126px;
+        border-radius: 3px;
+    }
+
+    .cancel{
+        border: 1px solid #878787;
+        box-sizing: border-box;
+        margin-right: 15px;
+        color: #000000;
+        
+    }
+
+    .save{
+        background: #33507C;
+        border: none;
+        color: #FFFFFF;
+
+
+    }
+  }
+
+
+  .modal-header-check{
+      border: none;
+
+  }
+
+  .modal-body.modal-body-check .check {
+    margin-left: 75px;
+}
+
+.modal-body.modal-body-check {
+    padding-bottom: 50px;
+}
+
+
+.great-exam {
+    margin-top: 20px;
+    .great{
+        font-family: Inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        color: #000000;
+        margin-left: 90px;
+    }
+
+    .exam-s-c{
+        font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+color: #000000;
+margin-top: 15px;
+margin-left: 50px;
+    }
+   
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation : portrait) {
+  .table-responsive-1 {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+}
+
+
+

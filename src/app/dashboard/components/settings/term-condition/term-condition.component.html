@@ -1,0 +1,28 @@
+<div class="row pb-3">
+  <div class="col-md d-flex justify-conten-start a-message">All</div>
+  <div class="add-program" [routerLink]="'../../addtermcondition'">+ Add T&C</div>
+</div>
+<table class="table table-responsive-1">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">User</th>
+      <th scope="col">Created On</th>
+      <th scope="col">Created By</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ country.Course }}</td>
+      <td>{{ country.CreatedOn }}</td>
+      <td>{{ country.LessonNote }}</td>
+      <td>
+        <img [routerLink]="'../../viewtermcondition'" src="assets/Images/view-icon.svg" />
+        <img class="ml-1" src="assets/Images/edit-icon.svg" />
+        <img class="ml-1" src="assets/Images/delet-icon.svg" />
+      </td>
+    </tr>
+  </tbody>
+</table>

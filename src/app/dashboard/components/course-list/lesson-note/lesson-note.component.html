@@ -1,0 +1,142 @@
+<div class="container-fluid page">
+  <div class="row pb-3">
+    <div class="col-md d-flex justify-conten-start">Lesson Note List</div>
+    <div class="add-program" (click)="open(content)">+ Add Lesson Note</div>
+  </div>
+  <div class="page__content shadow position-relative">
+    <table class="table table-responsive-1">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">
+            Programme <img src="assets/Images/up-down-key.svg" alt="" />
+          </th>
+          <th scope="col">
+            Category <img src="assets/Images/up-down-key.svg" alt="" />
+          </th>
+          <th scope="col">Title</th>
+          <th scope="col">Created On</th>
+          <th scope="col">Created By</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ country.Programme }}
+          </td>
+          <td>{{ country.Category }}</td>
+          <td>{{ country.Course }}</td>
+          <td>{{ country.Pathway }}</td>
+          <td>{{ country.LessonNote }}</td>
+          <td>
+            <img src="assets/Images/edit-icon.svg" />
+            <img class="ml-1" src="assets/Images/delet-icon.svg" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--add modal -->
+
+<ng-template #content let-modal>
+  <div class="modal-header header-addexam">
+    <h4 class="modal-title" id="modal-basic-title">ADD LESSON NOTE</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <img src="assets/Images/cross.svg" alt="" />
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Programme *</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option selected>Select programme</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Title *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Enter title"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div><label class="attributes" for="">Attributes</label><br /></div>
+        <div>
+          <img src="assets/Images/carbon_add-alt.svg" alt="" />
+        </div>
+      </div>
+      <label class="lablel-exam-board" for="">Attributes 1</label><br />
+      <div class="d-flex justify-content-between">
+        <div>
+          <input
+            class="attributes-1"
+            type="text"
+            placeholder="Enter attribute name"
+          />
+        </div>
+        <div>
+          <img src="assets/Images/ant-design_minus-circle-outlined.svg" />
+        </div>
+      </div>
+
+      <div class="btn-c-save">
+        <input
+          class="cancel"
+          (click)="modal.dismiss('Cross click')"
+          type="button"
+          value="Cancel"
+        />
+        <input
+          (click)="openSm(content1)"
+          class="save"
+          type="button"
+          value="Save"
+        />
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #content1 let-modal>
+  <div class="modal-header modal-header-check">
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <img src="assets/Images/cross-icon-black.svg" alt="" />
+    </button>
+  </div>
+  <div class="modal-body modal-body-check">
+    <div class="check">
+      <img src="../../../../../assets/Images/check.svg" alt="" />
+    </div>
+    <div class="great-exam">
+      <div class="great">Great!</div>
+      <div class="exam-s-c">Lesson Note Added Sucessfully</div>
+    </div>
+  </div>
+</ng-template>

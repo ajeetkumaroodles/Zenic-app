@@ -1,0 +1,103 @@
+<div class="container-fluid page">
+    <div class="add-tamplate">
+      <div class="rating-review" [routerLink]="'/manageschools'">
+        Manage Schools /  
+      </div>
+      <div class="add-template">DML Creative Music School </div>
+    </div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="assets/Images/school-img.svg">
+          </div>
+          <div class="col-md-9">
+            <div class="school-heading">
+              <div class="school-status">
+                <div class="school-img">
+                  <img src="assets/Images/check-active.svg" alt="">
+                </div>
+                <div class="status">
+                  Active
+                </div>
+              </div>
+              <div class="school-name"> 
+                High School
+              </div>
+            </div>
+            <div class="location">
+              <div class="date-expiry">
+                Expiry Date : 30-10-2021
+              </div>
+              <div class="location-history">
+                <img src="assets/Images/location.svg">
+                <div class="city">
+                  City : Malaysia
+                </div>
+                <div class="pi">|</div>
+                <div class="state">
+                  State : Kedah
+                </div>
+                <div class="pi">|</div>
+                <div class="link">
+                  Links : 
+                  <img src="assets/Images/facebook.svg">
+                  <img src="assets/Images/instagram.svg">
+                  <img src="assets/Images/youtube.svg">
+                </div>
+              
+              </div>
+              <div>
+                <hr>
+              </div>
+
+              <div class="person-charge">
+                <div class="add-branch">
+                  +Add Branch
+                </div>
+                <div class="person">
+                  Person in Charge 
+                </div>
+
+                <div class="contact-details">
+                  <div class="name">Name :  Daniel Wilsum </div>
+                  <div class="pi">
+                    |
+                  </div>
+                  <div class="email">
+                    <img src="assets/Images/emails.svg">
+                    <div>Email : Daniel@gmail.com</div>
+                  </div>
+                  <div class="pi">
+                    |
+                  </div>
+                  <div class="contact">
+                    <img src="assets/Images/call.svg">
+                    <div>Contact : 8748493322</div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+             
+
+
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="school-all-details">
+              <div class="school-details" [routerLink]="'./'">School Details</div>
+              <div class="zenic-editon" [routerLink]="'zenicedition'">Zenic Edition</div>
+              <div class="courses-offered" [routerLink]="'coursesoffered'">Courses Offered</div>
+              <div class="payment-history" [routerLink]="'paymenthistory'">Payment History</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+
+ 

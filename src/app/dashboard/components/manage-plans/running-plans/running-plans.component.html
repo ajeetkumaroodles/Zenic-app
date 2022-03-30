@@ -1,0 +1,44 @@
+<div class="row pb-3">
+  <div class="col-md d-flex justify-conten-start a-message">Ongoing Plans</div>
+  <div class="search-box mr-3">
+    <img src="../../../../assets/Images/search-icon.svg" />
+    <input class="pl-3" type="text" placeholder="Search.." />
+  </div>
+</div>
+<table class="table table-responsive-1">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">School Name</th>
+      <th scope="col">Plan</th>
+      <th scope="col">State</th>
+
+      <th scope="col">
+        Start Date <img src="assets/Images/up-down-key.svg" alt="" />
+      </th>
+      <th scope="col">
+        Expiry Date <img src="assets/Images/up-down-key.svg" alt="" />
+      </th>
+      <th scope="col">Created By</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{ country.Programme }}
+      </td>
+      <td>{{ country.Category }}</td>
+      <td>{{ country.Category }}</td>
+      <td>{{ country.Course }}</td>
+      <td>{{ country.Pathway }}</td>
+      <td>{{ country.LessonNote }}</td>
+      <td>
+        <img [routerLink]="'/runningplanviewdetail'" src="assets/Images/view-icon.svg" />
+        <img class="ml-1" src="../../../../../assets/Images/edit-icon.svg" />
+        <img class="ml-1" src="assets/Images/delet-icon.svg" />
+      </td>
+    </tr>
+  </tbody>
+</table>

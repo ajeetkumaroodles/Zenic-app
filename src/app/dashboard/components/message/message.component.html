@@ -1,0 +1,42 @@
+<div class="container-fluid page">
+  <div class="page__content shadow p-3 position-relative">
+    <div class="row pb-3">
+      <div class="col-md d-flex justify-conten-start a-message">All Messages</div>
+      <div class="search-box mr-3">
+        <img src="../../../../assets/Images/search-icon.svg">
+        <input class="pl-3" type="text" placeholder="Search..">
+      </div>
+    </div>
+    <table class="table table-responsive-1">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Client Name</th>
+          <th scope="col">Zenic ID</th>
+          <th scope="col">
+            Date <img src="assets/Images/up-down-key.svg" alt="" />
+          </th>
+          <th scope="col">Message Category <img src="assets/Images/up-down-key.svg" alt="" /></th>
+          <th scope="col">Content</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ country.Programme }}
+          </td>
+          <td>{{ country.Category }}</td>
+          <td>{{ country.Course }}</td>
+          <td>{{ country.Pathway }}</td>
+          <td>{{ country.LessonNote }}</td>
+          <td>
+            <img [routerLink]="'../viewmessage'" src="assets/Images/view-icon.svg" />
+            <img class="ml-1" src="assets/Images/delet-icon.svg" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

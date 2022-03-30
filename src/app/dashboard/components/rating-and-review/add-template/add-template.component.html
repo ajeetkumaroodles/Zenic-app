@@ -1,0 +1,120 @@
+<div class="container-fluid page">
+  <div class="add-tamplate">
+    <div class="rating-review" [routerLink]="'/ratingandreview'">
+      Ratings & Reviews /
+    </div>
+    <div class="add-template">Add Template</div>
+  </div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="add-tamplate-header">
+      <div class="tamplate-details">Template Details</div>
+      <div class="Preview">
+        <img src="assets/Images/bx_bx-play.svg" alt="" />
+        Preview
+      </div>
+    </div>
+    <div class="form-div">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Title *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="Enter title"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Category*</label>
+            <select id="inputState" class="form-control">
+              <option selected>Select category</option>
+              <option>...</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Set Values *</label>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputCity">Value 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCity"
+              placeholder="Enter"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Value 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputZip"
+              placeholder="Enter"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputZip">Value 3</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputZip"
+              placeholder="Enter"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputZip">Value 4</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputZip"
+              placeholder="Enter"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputZip">Value 5</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputZip"
+              placeholder="Enter"
+            />
+          </div>
+        </div>
+        <div class="set-question">Set Questions</div>
+        <div class="form-group" col-md-9>
+          <label for="inputZip">Question 1</label>
+          <div class="add-questions">
+            <input
+              type="text"
+              class="form-control"
+              id="inputZip"
+              placeholder="Enter"
+            />
+            <img
+              src="assets/Images/ant-design_minus-circle-outlined.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="add-new-question">+ Add New Question</div>
+      </form>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  </div>
+
+  <div class="btn-save-cancel">
+    <input
+      class="btn-cancel"
+      type="button"
+      value="Cancel"
+      [routerLink]="'/ratingandreview'"
+    />
+    <input class="btn-save" type="button" value="Save" />
+  </div>
+</div>

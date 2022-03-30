@@ -1,0 +1,132 @@
+mat-sidenav-container {
+  height: 100%;
+
+  mat-sidenav {
+    background: #33507c;
+    color: white;
+
+    .logo {
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
+      height: 90px;
+    }
+
+    mat-nav-list {
+      .chevron-button {
+        transition: 300ms ease-in-out;
+        transform: rotate(0deg);
+        right: 0;
+        float: right;
+        position: absolute;
+      }
+
+      .chevron-button.rotated {
+        transform: rotate(180deg);
+      }
+      .menu-text {
+        margin-left: 20px;
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+mat-icon.mat-icon.notranslate.menu-button.material-icons.mat-icon-no-color.ng-star-inserted {
+  color: white;
+}
+
+.header {
+  background: #ffffff;
+  box-shadow: 0px 0.891209px 26.7363px rgba(0, 0, 0, 0.07);
+}
+
+.header-div {
+  width: 100%;
+}
+
+.left-div {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 10px;
+  float: left;
+}
+
+.right-div {
+  display: flex;
+  float: right;
+}
+.notification-icon {
+  margin-right: 15px;
+}
+
+.welcome {
+  margin-right: 15px;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.admin {
+  margin-top: 22px;
+  position: absolute;
+  margin-left: 120px;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.mat-list-base {
+  padding-top: 0px;
+}
+
+mat-icon.mat-icon.notranslate.mat-list-icon.chevron-button.sidenav-button.material-icons.mat-icon-no-color.rotated,
+mat-icon.mat-icon.notranslate.mat-list-icon.chevron-button.sidenav-button.material-icons.mat-icon-no-color {
+  background: #ffffff;
+}
+
+.logo-img {
+  width: 160px;
+}
+
+.example-container {
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.example-sidenav {
+  user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  // display: none;
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+  background: #294673;
+}
+.submenu.expanded {
+  transform: scaleY(1);
+}

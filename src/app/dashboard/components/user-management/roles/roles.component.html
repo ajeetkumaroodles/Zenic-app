@@ -1,0 +1,35 @@
+<div class="container-fluid page">
+  <div class="page__content shadow p-3 position-relative">
+    <div class="row pb-3">
+      <div class="col-md d-flex justify-conten-start heading-all">
+        All Roles
+      </div>
+      <div class="add-program" [routerLink]="'../addrole'" >+ Add Role</div>
+    </div>
+    <table class="table table-responsive-1">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Role</th>
+          <th scope="col">Created On</th>
+          <th scope="col">Created By</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ country.Programme }}
+          </td>
+          <td>{{ country.CreatedOn }}</td>
+          <td>{{ country.Course }}</td>
+          <td>
+            <img src="assets/Images/edit-icon.svg" />
+            <img class="ml-1" src="assets/Images/delet-icon.svg" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

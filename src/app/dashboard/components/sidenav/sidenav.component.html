@@ -1,0 +1,221 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <mat-nav-list>
+      <mat-list-item class="logo">
+        <img class="logo-img" *ngIf="isExpanded" src="assets/Images/logo.svg" />
+        <mat-icon
+          mat-list-icon
+          class="chevron-button sidenav-button"
+          (click)="isExpanded = !isExpanded"
+          [ngClass]="{ rotated: isExpanded }"
+          >chevron_right</mat-icon
+        >
+      </mat-list-item>
+
+      <mat-list-item (click)="isExpanded = !isExpanded" [routerLink]="''">
+        <img src="assets/Images/dashboard.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Dashboard</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'manageschools'">
+        <img src="assets/Images/manage-school.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Manage Schools</span>
+      </mat-list-item>
+      <!-- 
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-list-item [routerLink]="'manageschools'">
+                    <img src="assets/Images/manage-school.svg">
+                    <span class="menu-text" *ngIf="isExpanded">Manage Schools</span>
+                  </mat-list-item>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul *ngIf="isExpanded">
+                <li>Programme</li>
+                <li>Lesson Note</li>
+                <li>Pathway</li>
+                <li>Categories</li>
+                <li>Courses</li>
+              </ul>
+            </mat-expansion-panel>
+          </mat-accordion> -->
+
+      <!-- <mat-list-item >
+            <img src="assets/Images/course-list.svg">
+            <span class="menu-text" *ngIf="isExpanded">Course List</span>
+          </mat-list-item> -->
+
+      <mat-list-item
+        (click)="showSubmenu = !showSubmenu"
+        class="parent"
+        [routerLink]="'courselist'"
+      >
+        <img src="assets/Images/course-list.svg" />
+        <span class="full-width menu-text" *ngIf="isExpanded || isShowing"
+          >Course List</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubmenu }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+
+      <div
+        class="submenu"
+        id="drpn"
+        [ngClass]="{ expanded: showSubmenu }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <mat-list-item class="text-white" [routerLink]="'programme'"
+          >Programme</mat-list-item
+        >
+        <mat-list-item class="text-white" [routerLink]="'lessonnote'"
+          >Lesson Note</mat-list-item
+        >
+        <mat-list-item class="text-white" [routerLink]="'pathway'"
+          >Pathway</mat-list-item
+        >
+        <mat-list-item class="text-white" [routerLink]="'categories'"
+          >Categories</mat-list-item
+        >
+        <mat-list-item class="text-white" [routerLink]="'courses'"
+          >Courses</mat-list-item
+        >
+      </div>
+
+      <mat-list-item [routerLink]="'manageplane'">
+        <img src="assets/Images/m-plan.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Manage Plans</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'message'">
+        <img src="assets/Images/message.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Messages</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'email'">
+        <img src="assets/Images/email.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Emails</span>
+      </mat-list-item>
+
+      <!--  -->
+
+      <!-- <mat-expansion-panel>
+        <mat-expansion-panel-header>
+         
+            <img src="assets/Images/email.svg" />
+            <span class="menu-text" *ngIf="isExpanded">Emails</span>
+      
+        </mat-expansion-panel-header>
+        <mat-list-item [routerLink]="'email'">
+          <span class="menu-text" *ngIf="isExpanded">Emails</span>
+        </mat-list-item>
+        <mat-list-item [routerLink]="'email'">
+          <span class="menu-text" *ngIf="isExpanded">Emails</span>
+        </mat-list-item>
+      </mat-expansion-panel> -->
+
+      <!--  -->
+
+      <mat-list-item>
+        <img src="assets/Images/enquery.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Enquiries</span>
+      </mat-list-item>
+
+      <mat-list-item>
+        <img src="assets/Images/posting.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Postings</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'exams'">
+        <img src="assets/Images/exam.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Exams</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'ratingandreview'">
+        <img src="assets/Images/rating-review.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Ratings & Reviews</span>
+      </mat-list-item>
+
+      <mat-list-item>
+        <img src="assets/Images/finance.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Financial Reports</span>
+      </mat-list-item>
+
+      <!-- <mat-list-item >
+            <img src="assets/Images/user-management.svg">
+            <span class="menu-text" *ngIf="isExpanded">User Management</span>
+          </mat-list-item> -->
+
+      <mat-list-item
+        (click)="showSubSubMenu = !showSubSubMenu"
+        class="parent"
+        [routerLink]="'users'"
+      >
+        <img src="assets/Images/user-management.svg" />
+        <span class="full-width menu-text" *ngIf="isExpanded || isShowing"
+          >User Management</span
+        >
+        <mat-icon
+          class="menu-button"
+          [ngClass]="{ rotated: showSubSubMenu }"
+          *ngIf="isExpanded || isShowing"
+          >expand_more</mat-icon
+        >
+      </mat-list-item>
+
+      <div
+        class="submenu"
+        [ngClass]="{ expanded: showSubSubMenu }"
+        *ngIf="isShowing || isExpanded"
+      >
+        <mat-list-item class="text-white" [routerLink]="'roles'"
+          >Roles</mat-list-item
+        >
+        <mat-list-item class="text-white" [routerLink]="'users'"
+          >Users</mat-list-item
+        >
+      </div>
+
+      <mat-list-item [routerLink]="'activitylog'">
+        <img src="assets/Images/activity.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Activity Log</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'calender'">
+        <img src="assets/Images/calender.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Calender</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'settings'">
+        <img src="assets/Images/seting.svg" />
+        <span class="menu-text" *ngIf="isExpanded">Settings</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div class="content">
+    <mat-toolbar class="header sticky-top">
+      <div class="header-div">
+        <div class="left-div">Exam</div>
+        <div class="right-div">
+          <div class="notification-icon">
+            <img src="assets/Images/notification.svg" alt="" />
+          </div>
+          <div class="welcome">Welcome Logan</div>
+          <div class="admin">Admin</div>
+          <div>
+            <img src="assets/Images/user-img.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

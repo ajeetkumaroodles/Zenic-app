@@ -1,0 +1,103 @@
+<div class="container-fluid page">
+  <div class="add-tamplate">
+    <div class="rating-review" [routerLink]="'/settings'">All FAQs /</div>
+    <div class="add-template">Add Question</div>
+  </div>
+  <div class="page__content shadow p-5 position-relative">
+    <div class="container">
+      <div class="tamplate-details">Question Details</div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group receipt">
+              <label for="exampleFormControlSelect1">User</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Select user</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group receipt">
+            <label for="exampleFormControlSelect1">Subject</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="2"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group receipt">
+            <label for="email">Content</label>
+            <angular-editor
+              [placeholder]="'This is the auto HTML editor'"
+              formControlName="description"  
+            ></angular-editor>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md">
+          <div class="form-group receipt">
+            <label for="exampleFormControlSelect1">Content</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="8"
+              placeholder="This is the auto HTML editor"
+            ></textarea>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="btn-save-cancel">
+        <input
+          class="btn-cancel"
+          type="button"
+          value="Cancel"
+          [routerLink]="'/settings'"
+        />
+        <input
+          (click)="openSm(content1)"
+          class="btn-save"
+          type="button"
+          value="Save"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Modal -->
+
+<ng-template #content1 let-modal>
+  <div class="modal-header modal-header-check">
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <img src="assets/Images/cross-icon-black.svg" alt="" />
+    </button>
+  </div>
+  <div class="modal-body modal-body-check">
+    <div class="check">
+      <img src="assets/Images/check.svg" alt="" />
+    </div>
+    <div class="great-exam">
+      <div class="great">Great!</div>
+      <div class="exam-s-c">Changes Saved Sucessfully</div>
+    </div>
+  </div>
+</ng-template>

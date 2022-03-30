@@ -1,0 +1,102 @@
+<div class="container-fluid page">
+  <div class="page__content shadow p-3 position-relative">
+      <div class="table-header">
+          <div class="table-content">
+            All Schools
+          </div>
+          <div class="table-add" [routerLink]="'/addschool'">
+            + Add School
+          </div>
+      </div>
+
+
+
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-responsive-1">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> School Name <img src="assets/Images/up-down-key.svg" [matMenuTriggerFor]="menu"></th>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <span>Short By</span>
+              </button>
+              <button mat-menu-item>
+                <span>A-Z</span>
+              </button>
+              <button mat-menu-item>
+                <span>Z-A</span>
+              </button>
+            </mat-menu> 
+            <td mat-cell *matCellDef="let element" class="school-name" [routerLink]="'/schoolname'"> {{element.name}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Business ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> State <img src="assets/Images/up-down-key.svg"></th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="createdby">
+              <th mat-header-cell *matHeaderCellDef> City </th>
+              <td mat-cell *matCellDef="let element"> {{element.createdby}} </td>
+            </ng-container>
+            <ng-container matColumnDef="zenicEdition">
+              <th mat-header-cell *matHeaderCellDef> Zenic Edition <img src="assets/Images/up-down-key.svg"></th>
+              <td mat-cell *matCellDef="let element"> {{element.zenicEdition}} </td>
+            </ng-container>
+            <ng-container matColumnDef="type">
+              <th mat-header-cell *matHeaderCellDef> Type <img src="assets/Images/up-down-key.svg"></th>
+              <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef> Status <img src="assets/Images/up-down-key.svg"></th>
+              <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="joiningDate">
+              <th mat-header-cell *matHeaderCellDef> Joining Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.joiningDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="expDate">
+              <th mat-header-cell *matHeaderCellDef> Exp Date <img src="assets/Images/up-down-key.svg"></th>
+              <td mat-cell *matCellDef="let element"> {{element.expDate}} </td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef> Actions </th>
+              <td mat-cell *matCellDef="let element">
+                  <div class="icon-edit-delet">
+                      <div class="edit-icon">
+                          <img src="../../../../assets/Images/edit-icon.svg">
+                      </div>
+                      <div class="delet-icon">
+                          <img src="../../../../assets/Images/delet-icon.svg">
+                      </div>
+
+                  </div>
+                    
+              </td>
+            </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  </div>
+</div>
+  

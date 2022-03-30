@@ -1,0 +1,130 @@
+.page {
+  color: white;
+  padding: 0px 30px 0px 30px;
+
+  background: #e5e5e5;
+  &__content {
+    // min-height: calc(100vh - 105px);
+    //   margin-top: 2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.add-tamplate {
+  display: flex;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6b6a6a;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  .rating-review {
+    cursor: pointer;
+  }
+}
+
+.school-heading {
+  margin-top: 30px;
+
+  .school-status {
+    display: flex;
+    float: right;
+    background: #c4e7b7;
+    border-radius: 35px;
+    padding: 5px 10px;
+
+    .school-img {
+      margin-right: 10px;
+    }
+
+    .status {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+
+  .school-name {
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    color: #16569d;
+  }
+}
+
+.location {
+  margin-top: 20px;
+  .date-expiry {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    float: right;
+  }
+
+  .location-history {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    .city,
+    .state,
+    .pi,
+    .link,
+    .link img {
+      margin-left: 10px;
+    }
+  }
+}
+
+.person-charge {
+  margin-top: 20px;
+  .person {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .add-branch {
+    float: right;
+    border: 1px solid #cccbcb;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.contact-details{
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  margin-top: 30px;
+
+  .pi, .email, .email div, .contact, .contact div{
+    margin-left: 10px;
+    
+  }
+
+  .email, .contact{
+    display: flex;
+
+  }
+}
+
+.school-all-details{
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  margin-top: 70px;
+  padding-bottom: 20px;
+  .school-details, .zenic-editon, .courses-offered, .payment-history{
+    margin-left: 25px;
+    cursor: pointer;
+  }
+}

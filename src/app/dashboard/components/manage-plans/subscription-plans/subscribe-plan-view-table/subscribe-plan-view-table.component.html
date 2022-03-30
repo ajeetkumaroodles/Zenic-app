@@ -1,0 +1,35 @@
+<table class="table table-responsive-1">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Title</th>
+      <th scope="col">Subscription</th>
+      <th scope="col">Student Limit</th>
+      <th scope="col">State</th>
+      <th scope="col">Description</th>
+      <th scope="col">
+        Created On <img src="assets/Images/up-down-key.svg" alt="" />
+      </th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{ country.Programme }}
+      </td>
+      <td>{{ country.Category }}</td>
+
+      <td>{{ country.Category }}</td>
+      <td>{{ country.Category }}</td>
+      <td>{{ country.Course }}</td>
+      <td>{{ country.CreatedOn}}</td>
+      <td>
+        <img [routerLink]="'/subviewdetail'" src="assets/Images/view-icon.svg" />
+        <img class="ml-1" src="../../../../../assets/Images/edit-icon.svg" />
+        <img class="ml-1" src="assets/Images/delet-icon.svg" />
+      </td>
+    </tr>
+  </tbody>
+</table>

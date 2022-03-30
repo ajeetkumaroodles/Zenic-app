@@ -1,0 +1,92 @@
+.page {
+    color: white;
+    padding: 0px 20px 20px 20px;
+
+    background: #e5e5e5;
+    &__content {
+      min-height: calc(100vh - 10px);
+      //   margin-top: 2rem;
+      background: white;
+      color: black;
+    }
+  }
+
+  .add-tamplate {
+    display: flex;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b6a6a;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .rating-review {
+      cursor: pointer;
+    }
+  }
+
+  .status{
+    border: 1px solid #DEDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+
+.okay{
+  border-bottom: 1px solid #DEDDDD;
+}
+  }
+
+  .module-title{
+    background: #EDEDED;
+
+
+  }
+
+
+  .img-div {
+    background: #f1f1f1;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: relative;
+
+    img {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .plan-name{
+      background: #8AC9FE;
+      font-size: 14px;
+      border-radius: 2px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 24px;
+      padding: 2px 10px;
+      left: 50%;
+      transform: translateX(-48px);
+  }
+}
+
+.plan-status{
+  background: #63A671;
+  color: #FFFFFF;
+
+  font-size: 14px;
+  border-radius: 2px;
+  font-weight: 600;
+  padding: 4px 10px;
+  
+}
+
+.table-titile p{
+  font-size: 12px;
+
+}
+
+
+
+

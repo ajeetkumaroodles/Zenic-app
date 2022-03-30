@@ -1,0 +1,124 @@
+<div class="container-fluid page">
+    <div class="page__content shadow p-3 position-relative">
+        <div class="table-header">
+            <div class="table-content">
+                All Exams
+            </div>
+            <div class="table-add" (click)="open(content)">
+                + Add Exam
+            </div>
+        </div>
+
+
+
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-responsive-1">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Programme</th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Exam Board </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Created On </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="createdby">
+                <th mat-header-cell *matHeaderCellDef> Created By </th>
+                <td mat-cell *matCellDef="let element"> {{element.createdby}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="icon-edit-delet">
+                        <div class="edit-icon">
+                            <img src="../../../../assets/Images/edit-icon.svg">
+                        </div>
+                        <div class="delet-icon">
+                            <img src="../../../../assets/Images/delet-icon.svg">
+                        </div>
+
+                    </div>
+                      
+                </td>
+              </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <ng-template #content let-modal>
+            <div class="modal-header header-addexam">
+              <h4 class="modal-title" id="modal-basic-title">ADD EXAM</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')"><img src="assets/Images/cross.svg" alt="">
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Programme *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Programme *"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Exam Board *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Enter name"
+                  />
+                </div>
+                  <div class="btn-c-save">
+                    <input class="cancel" (click)="modal.dismiss('Cross click')" type="button" value="Cancel">
+                      <input (click)="openSm(content1)" class="save" type="button" value="Save">    
+                  </div>
+              </form>
+            </div>
+          </ng-template>
+
+
+          <ng-template #content1 let-modal>
+            <div class="modal-header modal-header-check ">
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')"><img src="assets/Images/cross-icon-black.svg" alt="">
+              </button>
+            </div>
+            <div class="modal-body modal-body-check">
+                <div class="check">
+                    <img src="../../../../assets/Images/check.svg" alt="">
+                </div>
+                <div class="great-exam">
+                    <div class="great">Great!</div>
+                    <div class="exam-s-c">Exam Sucessfully Created</div>
+                </div>
+            </div>
+          </ng-template>
+    </div>
+  </div>
+  
+
+
+
+  

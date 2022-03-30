@@ -1,0 +1,66 @@
+<div class="container-fluid page">
+  <div class="row pb-3">
+    <div class="col-md">All Courses </div>
+    <div class="justify-content-end col-md row mr-2">
+      <div class="search mr-2 mt-2">Search By :</div>
+      <div>
+        <div ngbDropdown class="d-inline-block mr-2">
+          <button
+            class="btn dropdown-btn"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            Select Action
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+      <input
+        id="typeahead-config"
+        type="text"
+        class="form-control mr-2 search-box"
+        placeholder="Enter..."
+      />
+      <button class="btn search-btn">Search</button>
+    </div>
+  </div>
+  <div class="page__content shadow position-relative">
+    <table class="table table-responsive-1">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Programme <img src="assets/Images/up-down-key.svg" alt=""></th>
+          <th scope="col">Category <img src="assets/Images/up-down-key.svg" alt=""></th>
+          <th scope="col">Course <img src="assets/Images/up-down-key.svg" alt=""></th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+          <th scope="col">Created On</th>
+          <th scope="col">Created By</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ country.Programme }}
+          </td>
+          <td>{{ country.Category }}</td>
+          <td>{{ country.Course }}</td>
+          <td>{{ country.Pathway }}</td>
+          <td>{{ country.LessonNote }}</td>
+          <td>{{ country.ClassFormat }}</td>
+          <td>{{ country.Fee }}</td>
+          <td>
+              <img src="assets/Images/edit-icon.svg"/>
+              <img class="ml-1" src="assets/Images/delet-icon.svg"/>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

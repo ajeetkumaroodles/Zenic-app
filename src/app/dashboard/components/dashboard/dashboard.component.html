@@ -1,0 +1,416 @@
+<div class="container-fluid page">
+  <div class="container">
+    <div class="d-flex row py-3">
+      <div class="mr-auto p-2">
+        <h3>Overview</h3>
+      </div>
+      <div class="p-2 d-flex">
+        <p class="mt-2">from:</p>
+        <div class="input-group">
+          <img
+            class="date-select"
+            (click)="d.toggle()"
+            src="assets/Images/select-date.svg"
+          />
+          <img class="drp" src="assets/Images/ls_dropdown.svg" />
+          <input
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="dp1"
+            [(ngModel)]="model"
+            ngbDatepicker
+            #d="ngbDatepicker"
+          />
+        </div>
+      </div>
+      <div class="p-2 d-flex">
+        <p class="mt-2">To:</p>
+        <div class="input-group">
+          <img
+            class="date-select"
+            (click)="d1.toggle()"
+            src="assets/Images/select-date.svg"
+          />
+          <img class="drp" src="assets/Images/ls_dropdown.svg" />
+          <input
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="dp"
+            [(ngModel)]="model1"
+            ngbDatepicker
+            #d1="ngbDatepicker"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <h3 class="card-title">Total Schools</h3>
+            <div class="d-flex">
+              <h1><strong>70</strong></h1>
+              <p class="card-persent ml-2">+4.5%</p>
+              <img
+                class="ml-auto lavel-status"
+                src="assets/Images/up-arrow-color.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <h3 class="card-title">Active Schools</h3>
+            <div class="d-flex">
+              <h1><strong>40</strong></h1>
+              <p class="card-persent ml-2">+3.5%</p>
+              <img
+                class="ml-auto lavel-status"
+                src="assets/Images/up-arrow-color.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <h3 class="card-title">New Schools</h3>
+            <div class="d-flex">
+              <h1><strong>10</strong></h1>
+              <p class="card-persent ml-2">-1.5%</p>
+              <img
+                class="ml-auto lavel-status"
+                src="assets/Images/down-arrow-color.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <div class="d-flex">
+              <img src="assets/Images/teachers-icon.svg" />
+              <div class="ml-3">
+                <h3 class="card-title">Teachers</h3>
+                <div class="d-flex text-center">
+                  <div>
+                    <p class="total">New</p>
+                    <strong>12</strong>
+                  </div>
+                  <div class="vr"></div>
+                  <div class="total-value">
+                    <p class="total">Total</p>
+                    <strong>40</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <h3 class="card-title">Total Postings</h3>
+            <div class="d-flex">
+              <h1><strong>32</strong></h1>
+              <p class="card-persent ml-2">-3.5%</p>
+              <img
+                class="ml-auto lavel-status"
+                src="assets/Images/down-arrow-color.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <h3 class="card-title">Expiring Schools</h3>
+            <div class="d-flex">
+              <h1><strong>12</strong></h1>
+              <p class="card-persent ml-2">-1.5%</p>
+              <img
+                class="ml-auto lavel-status"
+                src="assets/Images/down-arrow-color.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <h3 class="card-title">Total Courses</h3>
+            <div class="d-flex">
+              <h1><strong>30</strong></h1>
+              <p class="card-persent ml-2">+1.5%</p>
+              <img
+                class="ml-auto lavel-status"
+                src="assets/Images/up-arrow-color.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card cust-card">
+          <div class="card-body">
+            <div class="d-flex">
+              <img src="assets/Images/student-icon.svg" />
+              <div class="ml-3">
+                <h3 class="card-title">Students</h3>
+                <div class="d-flex text-center">
+                  <div>
+                    <p class="total">New</p>
+                    <strong>12</strong>
+                  </div>
+                  <div class="vr"></div>
+                  <div class="total-value">
+                    <p class="total">Total</p>
+                    <strong>40</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col">
+        <div class="school-onboarding pt-3">
+          <div class="d-flex">
+            <h3 class="mr-auto ml-3">School Onboarding</h3>
+            <div class="form-group mr-3">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Last 6 Months</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="chart-icon mr-3" [routerLink]="''">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <div class="table-icon mr-3" [routerLink]="'charttable'">
+              <i class="bi bi-list-ul"></i>
+            </div>
+            <div class="add-school mr-3">+ Add School</div>
+          </div>
+
+          <hr />
+          <div>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-7">
+        <mat-card class="example-card">
+          <h3>Top 5 Popular Categories by Courses</h3>
+        </mat-card>
+      </div>
+      <div class="col-md">
+        <mat-card class="example-card">
+          <h3>Business Schools</h3>
+
+          <app-pie-chart></app-pie-chart>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md">
+        <mat-card class="example-card">
+          <div class="d-flex">
+            <h3 class="mr-auto">News & Events</h3>
+            <p class="mr-3 mt-2">Postings By :</p>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Business Owner</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex">
+            <p class="ml-auto">View All</p>
+          </div>
+
+          <mat-card class="example-card-1">
+            <div class="row">
+              <div class="col-md-2">
+                <img
+                  class="public-spic-img"
+                  src="assets/Images/public-speking.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-6">
+                <h2 class="m-0">Public Speaking</h2>
+                <div class="d-flex">
+                  <h4 class="m-0">
+                    School Name : <strong>DLM Creative School</strong>
+                  </h4>
+                  <h4 class="ml-3 mb-0">
+                    Post By : <strong>Business Owner</strong>
+                  </h4>
+                </div>
+                <div class="d-flex">
+                  <img
+                    class="uim-calender"
+                    src="assets/Images/uim_calender.svg"
+                    alt=""
+                  />
+                  <p class="pr-3 ml-3">
+                    Start Date : <strong>15-09-2021</strong>
+                  </p>
+                  |
+                  <p class="ml-3">End Date : <strong>17-09-2021</strong></p>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                  risus, volutpat donec mi volutpat hendrerit ornare sit. Vel mi
+                  pulvinar risus ut vitae. Laoreet ut risus ac nec lectus. Sed
+                  varius faucibus netus adipiscing magna. Sit commodo mattis
+                  massa feugiat nunc a tristique dignissim. Ut sit morbi arcu
+                  vivamus amet, arcu. Fusce eleifend euismod odio.
+                </p>
+              </div>
+              <div class="col-md-2">
+                <img
+                  class="mt-5"
+                  src="../../../../assets/Images/pngegg-29.svg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-2">
+                <div class="approved ml-5 mt-3">Approved</div>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card class="example-card-1 mt-3">
+            <div class="row">
+              <div class="col-md-2">
+                <img
+                  class="public-spic-img"
+                  src="assets/Images/public-speking.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-6">
+                <h2 class="m-0">Public Speaking</h2>
+                <div class="d-flex">
+                  <h4 class="m-0">
+                    School Name : <strong>DLM Creative School</strong>
+                  </h4>
+                  <h4 class="ml-3 mb-0">
+                    Post By : <strong>Business Owner</strong>
+                  </h4>
+                </div>
+                <div class="d-flex">
+                  <img
+                    class="uim-calender"
+                    src="assets/Images/uim_calender.svg"
+                    alt=""
+                  />
+                  <p class="pr-3 ml-3">
+                    Start Date : <strong>15-09-2021</strong>
+                  </p>
+                  |
+                  <p class="ml-3">End Date : <strong>17-09-2021</strong></p>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                  risus, volutpat donec mi volutpat hendrerit ornare sit. Vel mi
+                  pulvinar risus ut vitae. Laoreet ut risus ac nec lectus. Sed
+                  varius faucibus netus adipiscing magna. Sit commodo mattis
+                  massa feugiat nunc a tristique dignissim. Ut sit morbi arcu
+                  vivamus amet, arcu. Fusce eleifend euismod odio.
+                </p>
+              </div>
+              <div class="col-md-2">
+                <img
+                  class="mt-5"
+                  src="../../../../assets/Images/pngegg-29.svg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-2">
+                <div class="approved ml-5 mt-3">Approved</div>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card class="example-card-1 mt-3">
+            <div class="row">
+              <div class="col-md-2">
+                <img
+                  class="public-spic-img"
+                  src="assets/Images/public-speking.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-6">
+                <h2 class="m-0">Public Speaking</h2>
+                <div class="d-flex">
+                  <h4 class="m-0">
+                    School Name : <strong>DLM Creative School</strong>
+                  </h4>
+                  <h4 class="ml-3 mb-0">
+                    Post By : <strong>Business Owner</strong>
+                  </h4>
+                </div>
+                <div class="d-flex">
+                  <img
+                    class="uim-calender"
+                    src="assets/Images/uim_calender.svg"
+                    alt=""
+                  />
+                  <p class="pr-3 ml-3">
+                    Start Date : <strong>15-09-2021</strong>
+                  </p>
+                  |
+                  <p class="ml-3">End Date : <strong>17-09-2021</strong></p>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                  risus, volutpat donec mi volutpat hendrerit ornare sit. Vel mi
+                  pulvinar risus ut vitae. Laoreet ut risus ac nec lectus. Sed
+                  varius faucibus netus adipiscing magna. Sit commodo mattis
+                  massa feugiat nunc a tristique dignissim. Ut sit morbi arcu
+                  vivamus amet, arcu. Fusce eleifend euismod odio.
+                </p>
+              </div>
+              <div class="col-md-2">
+                <img
+                  class="mt-5"
+                  src="../../../../assets/Images/pngegg-29.svg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-2">
+                <div class="approved ml-5 mt-3">Approved</div>
+              </div>
+            </div>
+          </mat-card>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

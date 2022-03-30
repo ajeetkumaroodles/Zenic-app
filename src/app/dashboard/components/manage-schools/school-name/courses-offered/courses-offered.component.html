@@ -1,0 +1,58 @@
+<div class="container-fluid page">
+    <div class="page__content shadow p-3 position-relative">
+        <div class="container">
+            <div class="row justify-content-end" >
+                <div class="search mr-2 mt-2">
+                    Search By :
+                </div>
+                <div>
+                    <div ngbDropdown class="d-inline-block mr-2">
+                      <button class="btn dropdown-btn" id="dropdownBasic1" ngbDropdownToggle>Select Action</button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem>Action - 1</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                      </div>
+                    </div>
+                  </div>
+                  <input id="typeahead-config" type="text" class="form-control mr-2 search-box" placeholder="Enter..."/>
+                  <button class="btn search-btn">Search</button>
+            </div>
+        </div>
+            <table class="table table-responsive-1">
+                <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Programme</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">Pathway</th>
+                  <th scope="col">Lesson Note</th>
+                  <th scope="col">Class Format</th>
+                  <th scope="col">Fee</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">Created On</th>
+                  <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let country of countries; index as i">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>
+                    {{ country.Programme }}
+                  </td>
+                  <td>{{ country.Category}}</td>
+                  <td>{{ country.Course}}</td>
+                  <td>{{ country.Pathway}}</td>
+                  <td>{{ country.LessonNote}}</td>
+                  <td>{{ country.ClassFormat}}</td>
+                  <td>{{ country.Fee}}</td>
+                  <td>{{ country.Duration}}</td>
+                  <td>{{ country.CreatedOn}}</td>
+                  <td><img src="../../../../../../assets/Images/view-icon.svg"></td>
+                </tr>
+                </tbody>
+              </table>
+    </div>
+  </div>
+  

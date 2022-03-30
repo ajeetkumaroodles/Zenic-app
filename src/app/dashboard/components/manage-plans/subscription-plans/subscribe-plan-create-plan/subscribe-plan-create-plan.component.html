@@ -1,0 +1,276 @@
+<!-- <div class="container-fluid page">
+    <div class="add-tamplate">
+      <div class="rating-review" [routerLink]="'/manageplane'">
+        Manage Plans /  
+      </div>
+      <div class="add-template">Add Plan</div>
+    </div>
+    <div class="page__content shadow p-3 position-relative">
+    </div>
+  </div> -->
+
+<div class="container-fluid page">
+  <div class="add-tamplate">
+    <div class="rating-review" [routerLink]="'/manageplane'">
+      Manage Plans /
+    </div>
+    <div class="add-template">Add Plan</div>
+  </div>
+  <div class="page__content shadow p-5 position-relative">
+    <div class="container">
+      <div class="tamplate-details">Plan Details</div>
+      <div class="row mt-3">
+        <div class="col-md">
+          <form>
+            <div class="form-group receipt">
+              <label for="exampleFormControlSelect1">Plan </label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Select plan</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="col-md">
+          <form>
+            <div class="form-group receipt">
+              <label for="exampleFormControlSelect1">Max Student Limit</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Select limit</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="col-md">
+          <form>
+            <div class="form-group receipt">
+              <label for="exampleFormControlSelect1">Free Trial Days</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Select days</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group receipt">
+            <label for="exampleFormControlSelect1">Description</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-1">
+  <div class="page__content shadow p-5 position-relative">
+    <div class="container">
+      <div class="tamplate-details">Payment Details</div>
+      <div class="row mt-3">
+        <div class="col-md">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-group">
+            <label class="subFormate" for="exampleInputEmail1">Subscription Format :</label>
+            <div class="form-check pb-4 mt-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label  class="form-check-label ml-3 pt-1" for="flexCheckDefault">
+                Monthly
+              </label>
+            </div>
+            <div class="form-check pb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label ml-3 pt-1" for="flexCheckDefault">
+                Quarterly
+              </label>
+            </div>
+            <div class="form-check pb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label ml-3 pt-1" for="flexCheckDefault">
+                Half Yearly
+              </label>
+            </div>
+            <div class="form-check pb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label ml-3 pt-1" for="flexCheckDefault">
+                Yearly
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="sub-total">Sub Total : <strong>$400</strong></p>
+
+      <div class="row mt-4">
+        <div class="col-md">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Monthly Discount</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="5%"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Quarterly Discount</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="10%"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Half Yearly Discount</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="15%"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Yearly Discount</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="20%"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-group">
+            <br>
+            <br>
+            <p class="sub-total">Total : <strong>$380</strong></p>
+          </div>
+          <div class="form-group">
+            <br>
+            <br>
+            <p class="sub-total">Total : <strong>$360</strong></p>
+          </div>
+          <div class="form-group">
+            <br>
+            <br>
+            <p class="sub-total mt-2">Total : <strong>$340</strong></p>
+          </div>
+          <div class="form-group">
+            <br>
+            <br>
+            <p class="sub-total mt-1">Total : <strong>$320</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-save-cancel">
+    <input
+      class="btn-cancel"
+      type="button"
+      value="Cancel"
+      [routerLink]="'/email'"
+    />
+    <input
+      (click)="openSm(content1)"
+      class="btn-save"
+      type="button"
+      value="Save"
+    />
+  </div>
+</div>
+
+<!-- Add Modal -->
+
+<ng-template #content1 let-modal>
+  <div class="modal-header modal-header-check">
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <img src="assets/Images/cross-icon-black.svg" alt="" />
+    </button>
+  </div>
+  <div class="modal-body modal-body-check">
+    <div class="check">
+      <img src="assets/Images/check.svg" alt="" />
+    </div>
+    <div class="great-exam">
+      <div class="great">Great!</div>
+      <div class="exam-s-c">Template Sucessfully Added</div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,42 @@
+.page {
+    color: white;
+    padding: 0px 20px 20px 20px;
+
+    background: #e5e5e5;
+    &__content {
+      min-height: calc(100vh - 10px);
+      //   margin-top: 2rem;
+      background: white;
+      color: black;
+    }
+  }
+
+  .add-tamplate {
+    display: flex;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b6a6a;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .rating-review {
+      cursor: pointer;
+    }
+  }
+
+  .status{
+    border: 1px solid #DEDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+
+.okay{
+  border-bottom: 1px solid #DEDDDD;
+}
+  }
+
+  .module-title{
+    background: #EDEDED;
+
+
+  }
